@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter4Part4 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter4Part4 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,50 +11,26 @@ public class Chapter4Part4 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter4Part3.class);
-        startActivity(a);
+        switchActivity(this, Chapter4Part3.class);
     }
 
-    public void go_h4p5(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter4Part5.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter4Part5.class);
     }
 
     public void audio1_1 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag49_primerrecuadro_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag49_primerrecuadro_primeraparte);
     }
 
     public void audio1_2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag49_primerrecuadro_segundaparte);
-        mediaplayer.start();
+        play(R.raw.pag49_primerrecuadro_segundaparte);
     }
 
     public void audio2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag49_globo);
-        mediaplayer.start();
+        play(R.raw.pag49_globo);
     }
 
     public void audio3 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag49_segundorecuadro);
-        mediaplayer.start();
+        play(R.raw.pag49_segundorecuadro);
     }
 }

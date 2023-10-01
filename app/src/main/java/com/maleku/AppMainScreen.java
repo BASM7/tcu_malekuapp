@@ -2,11 +2,8 @@ package com.maleku;
 
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
 public class AppMainScreen extends MalekuCompatActivity {
-    private MediaPlayer mediaplayer;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,7 +11,7 @@ public class AppMainScreen extends MalekuCompatActivity {
     }
 
     public void playTitle(View view){
-        this.play(R.raw.titulo);
+        play(R.raw.titulo);
     }
 
     public void goChapter0Part1(View view){

@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter1Part8 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter1Part8 extends MalekuCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,57 +12,29 @@ public class Chapter1Part8 extends AppCompatActivity {
     }
 
     public void audio1(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag17_recuadrosuperior_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag17_recuadrosuperior_primeraparte);
     }
 
     public void audio1_5(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag17_recuadrosuperior_segundaparte);
-        mediaplayer.start();
+        play(R.raw.pag17_recuadrosuperior_segundaparte);
     }
     public void audio2(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag17_primerglobo);
-        mediaplayer.start();
+        play(R.raw.pag17_primerglobo);
     }
 
     public void audio3(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag17_segundoglobo);
-        mediaplayer.start();
+        play(R.raw.pag17_segundoglobo);
     }
 
     public void audio4(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag17_tercerglobo);
-        mediaplayer.start();
+        play(R.raw.pag17_tercerglobo);
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter1Part7.class);
-        startActivity(a);
+        switchActivity(this, Chapter1Part7.class);
     }
 
-    public void go_h1p9(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter1Part9.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter1Part9.class);
     }
 }

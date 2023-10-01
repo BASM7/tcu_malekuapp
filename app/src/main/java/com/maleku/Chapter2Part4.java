@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter2Part4 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter2Part4 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,41 +11,21 @@ public class Chapter2Part4 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter2Part3.class);
-        startActivity(a);
+        switchActivity(this, Chapter2Part3.class);
     }
-    public void go_h2p5(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter2Part5.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter2Part5.class);
     }
 
     public void audio (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag27_primerglobo);
-        mediaplayer.start();
+        play(R.raw.pag27_primerglobo);
     }
 
     public void audio2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag27_segundoglobo_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag27_segundoglobo_primeraparte);
     }
 
     public void audio2_5 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag27_segundoglobo_segundaparte);
-        mediaplayer.start();
+        play(R.raw.pag27_segundoglobo_segundaparte);
     }
 }

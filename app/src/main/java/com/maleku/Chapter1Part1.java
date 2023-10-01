@@ -1,12 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class Chapter1Part1 extends AppCompatActivity {
-
+public class Chapter1Part1 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -14,13 +11,10 @@ public class Chapter1Part1 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        Intent a = new Intent(this, AppMainScreen.class);
-        startActivity(a);
+        switchActivity(this, AppMainScreen.class);
     }
 
-    public void go_h1p2(View view){
-        Intent a = new Intent(this, Chapter1Part2.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter1Part2.class);
     }
-
 }

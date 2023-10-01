@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter1Part2 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter1Part2 extends MalekuCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,43 +12,22 @@ public class Chapter1Part2 extends AppCompatActivity {
     }
 
     public void audio1(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag11_recuadrosuperior);
-        mediaplayer.start();
+        play(R.raw.pag11_recuadrosuperior);
     }
 
     public void audio2(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag11_hablaelhombre);
-        mediaplayer.start();
+        play(R.raw.pag11_hablaelhombre);
     }
 
     public void audio3(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag11_recuadroinferior);
-        mediaplayer.start();
+        play(R.raw.pag11_recuadroinferior);
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter1Part1.class);
-        startActivity(a);
+        switchActivity(this, Chapter1Part1.class);
     }
 
-    public void go_h1p3(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter1Part3.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter1Part3.class);
     }
-
 }

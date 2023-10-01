@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter2Part12 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter2Part12 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,58 +11,30 @@ public class Chapter2Part12 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter2Part11.class);
-        startActivity(a);
+        switchActivity(this, Chapter2Part11.class);
     }
 
-    public void go_h2p13(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter2Part13.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter2Part13.class);
     }
 
     public void audio1 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag35_recuadro_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag35_recuadro_primeraparte);
     }
 
     public void audio1_2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag35_recuadro_segundaparte);
-        mediaplayer.start();
+        play(R.raw.pag35_recuadro_segundaparte);
     }
 
     public void audio1_3 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag35_recuadro_terceraparte);
-        mediaplayer.start();
+        play(R.raw.pag35_recuadro_terceraparte);
     }
 
     public void audio2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag35_globo_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag35_globo_primeraparte);
     }
 
     public void audio2_2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag35_globo_segundaparte);
-        mediaplayer.start();
+        play(R.raw.pag35_globo_segundaparte);
     }
 }

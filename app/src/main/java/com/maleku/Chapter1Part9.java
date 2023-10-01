@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter1Part9 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter1Part9 extends MalekuCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,50 +12,26 @@ public class Chapter1Part9 extends AppCompatActivity {
     }
 
     public void audio1(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag18_recuadrosuperior);
-        mediaplayer.start();
+        play(R.raw.pag18_recuadrosuperior);
     }
 
     public void audio2(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag18_segundorecuadro);
-        mediaplayer.start();
+        play(R.raw.pag18_segundorecuadro);
     }
 
     public void audio3(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag18_globo);
-        mediaplayer.start();
+        play(R.raw.pag18_globo);
     }
 
     public void audio4(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag18_tercerrecuadro);
-        mediaplayer.start();
+        play(R.raw.pag18_tercerrecuadro);
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter1Part8.class);
-        startActivity(a);
+        switchActivity(this, Chapter1Part8.class);
     }
 
-    public void go_h1p10(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter1Part10.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter1Part10.class);
     }
 }

@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter5Part3 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter5Part3 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,74 +11,38 @@ public class Chapter5Part3 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter5Part2.class);
-        startActivity(a);
+        switchActivity(this, Chapter5Part2.class);
     }
 
-    public void go_h5p4(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter5Part4.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter5Part4.class);
     }
 
     public void audio1_1 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_primerrecuadro_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag54_primerrecuadro_primeraparte);
     }
 
     public void audio1_2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_primerrecuadro_segundaparte);
-        mediaplayer.start();
+        play(R.raw.pag54_primerrecuadro_segundaparte);
     }
 
     public void audio1_3 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_primerrecuadro_terceraparte);
-        mediaplayer.start();
+        play(R.raw.pag54_primerrecuadro_terceraparte);
     }
 
     public void audio2_1 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_globo_primeraparte);
-        mediaplayer.start();
+        play(R.raw.pag54_globo_primeraparte);
     }
 
     public void audio2_2 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_globo_segundaparte);
-        mediaplayer.start();
+         play(R.raw.pag54_globo_segundaparte);
     }
 
     public void audio3 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_segundorecuadro);
-        mediaplayer.start();
+        play(R.raw.pag54_segundorecuadro);
     }
 
     public void audio4 (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag54_tercerrecuadro);
-        mediaplayer.start();
+        play(R.raw.pag54_tercerrecuadro);
     }
 }

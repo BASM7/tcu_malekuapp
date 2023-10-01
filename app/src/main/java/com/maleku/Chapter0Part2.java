@@ -1,42 +1,24 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter0Part2 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
-
+public class Chapter0Part2 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.h0p2);
     }
 
-    public void go_h0p3(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter0Part3.class);
-        startActivity(a);
+    public void goPrevious(View view){
+        switchActivity(this, Chapter0Part1.class);
     }
 
-    public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter0Part1.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter0Part3.class);
     }
 
     public void audio (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag6);
-        mediaplayer.start();
+        play(R.raw.pag6);
     }
-
 }

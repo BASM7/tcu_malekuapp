@@ -1,13 +1,9 @@
 package com.maleku;
 
-import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.media.MediaPlayer;
 
-public class Chapter3Part1 extends AppCompatActivity {
-    private MediaPlayer mediaplayer;
+public class Chapter3Part1 extends MalekuCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,26 +11,14 @@ public class Chapter3Part1 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, AppMainScreen.class);
-        startActivity(a);
+        switchActivity(this, AppMainScreen.class);
     }
 
-    public void go_h3p2(View view){
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        Intent a = new Intent(this, Chapter3Part2.class);
-        startActivity(a);
+    public void goNext(View view){
+        switchActivity(this, Chapter3Part2.class);
     }
 
     public void audio (View view) {
-        if (mediaplayer.isPlaying()){
-            mediaplayer.stop();
-        }
-        mediaplayer = MediaPlayer.create(this, R.raw.pag38_titulo);
-        mediaplayer.start();
+        play(R.raw.pag38_titulo);
     }
 }

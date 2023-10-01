@@ -35,8 +35,11 @@ public class MalekuCompatActivity extends AppCompatActivity {
     }
 
     protected void play(int resID) {
-        if (this.isPlaying())
+        if (this.isPlaying()) {
             this.getMediaPlayer().stop();
+            this.getMediaPlayer().reset();
+            this.getMediaPlayer().release();
+        }
 
         MediaPlayer newMediaPlayer = MediaPlayer.create(
                 this,
@@ -47,8 +50,12 @@ public class MalekuCompatActivity extends AppCompatActivity {
     }
 
     protected void switchActivity(MalekuCompatActivity currentActivity, Class<?> nextActivityClass){
-        if (currentActivity.isPlaying())
+        if (currentActivity.isPlaying()){
             currentActivity.getMediaPlayer().stop();
+            currentActivity.getMediaPlayer().reset();
+            currentActivity.getMediaPlayer().release();
+        }
+
         Intent newIntent = new Intent(currentActivity, nextActivityClass);
         startActivity(newIntent);
     }
