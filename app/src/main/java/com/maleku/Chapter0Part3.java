@@ -12,10 +12,6 @@ public class Chapter0Part3 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.h0p3);
-        mediaplayer = MediaPlayer.create(this, R.raw.titulo);
-        mediaplayer.setVolume(0,0);
-        mediaplayer.setLooping(true);
-        mediaplayer.start();
     }
 
     public void go_h0p4(View view){

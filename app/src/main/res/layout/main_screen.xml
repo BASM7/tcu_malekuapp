@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/novela_grafica_ec408_imprimir_12x18_2_compressed_pages_to_jpg_0001"
-    tools:context=".MainScreen">
+    tools:context=".AppMainScreen">
 
     <LinearLayout
         android:layout_width="409dp"
@@ -19,49 +19,49 @@
             android:id="@+id/goH0P1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="go_h0p1"
+            android:onClick="goChapter0Part1"
             android:text="h0" />
 
         <Button
             android:id="@+id/goh1p1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="go_h1p1"
+            android:onClick="goChapter1Part1"
             android:text="h1" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="go_h2p1"
+            android:onClick="goChapter2Part1"
             android:text="H2" />
 
         <Button
             android:id="@+id/button15"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="go_h3p1"
+            android:onClick="goChapter3Part1"
             android:text="h3" />
 
         <Button
             android:id="@+id/button16"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="go_h4p1"
+            android:onClick="goChapter4Part1"
             android:text="H4" />
 
         <Button
             android:id="@+id/button17"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="go_h5p1"
+            android:onClick="goChapter5Part1"
             android:text="h5" />
 
         <Button
             android:id="@+id/button18"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="go_h6p1"
+            android:onClick="goChapter6Part1"
             android:text="H6" />
     </LinearLayout>
 
@@ -69,7 +69,7 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="sonido_titulo"
+        android:onClick="playTitle"
         android:text="Button"
         tools:layout_editor_absoluteX="150dp"
         tools:layout_editor_absoluteY="102dp" />

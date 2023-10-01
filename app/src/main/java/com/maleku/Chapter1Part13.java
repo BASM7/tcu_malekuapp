@@ -12,10 +12,6 @@ public class Chapter1Part13 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.h1p13);
-        mediaplayer = MediaPlayer.create(this, R.raw.titulo);
-        mediaplayer.setVolume(0,0);
-        mediaplayer.setLooping(true);
-        mediaplayer.start();
     }
 
     public void audio1(View view){
@@ -38,7 +34,7 @@ public class Chapter1Part13 extends AppCompatActivity {
         if (mediaplayer.isPlaying()){
             mediaplayer.stop();
         }
-        Intent a = new Intent(this, MainScreen.class);
+        Intent a = new Intent(this, AppMainScreen.class);
         startActivity(a);
     }
 }

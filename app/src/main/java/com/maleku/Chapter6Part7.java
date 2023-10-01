@@ -12,9 +12,6 @@ public class Chapter6Part7 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.h6p7);
-        mediaplayer = MediaPlayer.create(this, R.raw.titulo);
-        mediaplayer.setVolume(0,0);
-        mediaplayer.start();
     }
 
     public void goPrevious(View view){
@@ -29,7 +26,7 @@ public class Chapter6Part7 extends AppCompatActivity {
         if (mediaplayer.isPlaying()){
             mediaplayer.stop();
         }
-        Intent a = new Intent(this, MainScreen.class);
+        Intent a = new Intent(this, AppMainScreen.class);
         startActivity(a);
     }
 

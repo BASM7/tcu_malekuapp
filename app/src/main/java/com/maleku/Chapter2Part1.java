@@ -15,7 +15,7 @@ public class Chapter2Part1 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        Intent a = new Intent(this, MainScreen.class);
+        Intent a = new Intent(this, AppMainScreen.class);
         startActivity(a);
     }
     public void go_h2p2(View view){

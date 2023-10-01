@@ -405,7 +405,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainScreen"
+            android:name=".AppMainScreen"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

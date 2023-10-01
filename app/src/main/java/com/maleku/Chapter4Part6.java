@@ -19,7 +19,7 @@ public class Chapter4Part6 extends AppCompatActivity {
     }
 
     public void go_main(View view){
-        Intent a = new Intent(this, MainScreen.class);
+        Intent a = new Intent(this, AppMainScreen.class);
         startActivity(a);
     }
 }

@@ -14,7 +14,7 @@ public class Chapter1Part1 extends AppCompatActivity {
     }
 
     public void goPrevious(View view){
-        Intent a = new Intent(this, MainScreen.class);
+        Intent a = new Intent(this, AppMainScreen.class);
         startActivity(a);
     }
 
